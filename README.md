@@ -12,8 +12,6 @@ in Gemfile
 
 `gem 'bootstrap-addons-rails'`
 
-Use `git: git://github.com/kristianmandrup/twitter_bootstrap-kaminari-views.git` to fetch gem from git repo
-
 then bundle it!
 
 ## Configuration
