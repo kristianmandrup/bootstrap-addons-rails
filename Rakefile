@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bootstrap-addons-rails"
   gem.homepage = "http://github.com/kristianmandrup/bootstrap-addons-rails"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Twitter Bootstrap addons: Color- and Datepicker, Image gallery, ready for use with Rails asset pipeline}
+  gem.description = %Q{Adds nice Bootstrap addons to your Rails Twitter Bootstrap based app}
   gem.email = "kmandrup@gmail.com"
   gem.authors = ["Kristian Mandrup"]
   # dependencies defined in Gemfile
