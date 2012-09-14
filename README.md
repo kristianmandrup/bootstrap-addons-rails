@@ -34,7 +34,7 @@ Javascripts:
 //= require bootstrap/colorpicker
 //= require bootstrap/datepicker
 
-//= require bootstrap/load-image-min
+//= require bootstrap/load-image.min
 //= require bootstrap/image-gallery.min
 ```
 
