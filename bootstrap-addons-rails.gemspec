@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "bootstrap-addons-rails"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-08-30"
+  s.date = "2012-09-14"
   s.description = "Adds nice Bootstrap addons to your Rails Twitter Bootstrap based app"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -42,6 +42,7 @@ Gem::Specification.new do |s|
     "vendor/assets/javascripts/bootstrap/datepicker.js",
     "vendor/assets/javascripts/bootstrap/image-gallery.js",
     "vendor/assets/javascripts/bootstrap/image-gallery.min.js",
+    "vendor/assets/javascripts/bootstrap/load-image.min.js",
     "vendor/assets/less/bootstrap/colorpicker.less",
     "vendor/assets/less/bootstrap/datepicker.less",
     "vendor/assets/stylesheets/bootstrap/colorpicker.css",
