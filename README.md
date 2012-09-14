@@ -4,7 +4,7 @@ Includes:
 
 * [colorpicker](http://www.eyecon.ro/bootstrap-colorpicker/)
 * [datepicker](http://www.eyecon.ro/bootstrap-datepicker/)
-* [Image Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)
+* [image gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)
 
 ## Installation
 
@@ -16,19 +16,27 @@ then bundle it!
 
 ## Configuration
 
+Stylesheets:
+
 ```css
  *= require bootstrap/colorpicker
  *= require bootstrap/datepicker
  *= require bootstrap/image-gallery
 ```
 
+Or using Compass/SASS:
+
+`@import "bootstrap/image-gallery";`
+
+Javascripts:
+
 ```javascript
 //= require bootstrap/colorpicker
 //= require bootstrap/datepicker
+
+//= require bootstrap/load-image-min
 //= require bootstrap/image-gallery.min
 ```
-
-Note: In the stylesheets the image refs must be updated to reflect their assets location. Please send me a pull request with these fixes ;)
 
 ## Extras
 
