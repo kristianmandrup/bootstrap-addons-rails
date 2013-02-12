@@ -1,5 +1,5 @@
 /*
- * Bootstrap Image Gallery 2.8
+ * Bootstrap Image Gallery 2.10
  * https://github.com/blueimp/Bootstrap-Image-Gallery
  *
  * Copyright 2011, Sebastian Tschan
@@ -80,6 +80,9 @@
         getUrl: function (element) {
             return element.href || $(element).data('href');
         },
+        getDownloadUrl: function (element) {
+            return $(element).data('download');
+        },
         startSlideShow: function () {
             var $this = this;
             if (this.options.slideshow) {
@@ -122,6 +125,7 @@
                 modal = this.$element,
                 index = this.options.index,
                 url = this.getUrl(this.$links[index]),
+                download = this.getDownloadUrl(this.$links[index]),
                 oldImg;
             this.abortLoad();
             this.stopSlideShow();
@@ -139,7 +143,7 @@
             modal.find('.modal-title').text(this.$links[index].title);
             modal.find('.modal-download').prop(
                 'href',
-                url
+                download || url
             );
             this._loadingImage = loadImage(
                 url,
@@ -167,17 +171,21 @@
                 height: img.height
             });
             modal.find('.modal-title').css({ width: Math.max(img.width, 380) });
-            if ($(window).width() > 480) {
-                if (transition) {
-                    clone = modal.clone().hide().appendTo(document.body);
-                }
+            if (transition) {
+                clone = modal.clone().hide().appendTo(document.body);
+            }
+            if ($(window).width() > 767) {
                 method.call(modal.stop(), {
                     'margin-top': -((clone || modal).outerHeight() / 2),
                     'margin-left': -((clone || modal).outerWidth() / 2)
                 });
-                if (clone) {
-                    clone.remove();
-                }
+            } else {
+                modal.css({
+                    top: ($(window).height() - (clone || modal).outerHeight()) / 2
+                });
+            }
+            if (clone) {
+                clone.remove();
             }
             modalImage.append(img);
             forceReflow = img.offsetWidth;
@@ -326,10 +334,14 @@
                         canvas: options.canvas
                     };
                 }
-                if (windowWidth > 480) {
+                if (windowWidth > 767) {
                     modal.css({
                         'margin-top': -(modal.outerHeight() / 2),
                         'margin-left': -(modal.outerWidth() / 2)
+                    });
+                } else {
+                    modal.css({
+                        top: ($(window).height() - modal.outerHeight()) / 2
                     });
                 }
                 this.initGalleryEvents();
@@ -369,7 +381,7 @@
                     options = $.extend(modal.data(), options);
                 }
                 if (!options.selector) {
-                    options.selector = 'a[rel=gallery]';
+                    options.selector = 'a[data-gallery=gallery]';
                 }
                 link = $(e.target).closest(options.selector);
                 if (link.length && modal.length) {
