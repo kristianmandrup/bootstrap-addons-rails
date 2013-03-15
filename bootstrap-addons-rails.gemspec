@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "bootstrap-addons-rails"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-09-14"
+  s.date = "2013-03-15"
   s.description = "Adds nice Bootstrap addons to your Rails Twitter Bootstrap based app"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    "CHANGELOG",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
@@ -53,7 +54,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/kristianmandrup/bootstrap-addons-rails"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "1.8.25"
   s.summary = "Twitter Bootstrap addons: Color- and Datepicker, Image gallery, ready for use with Rails asset pipeline"
 
   if s.respond_to? :specification_version then
