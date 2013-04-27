@@ -31,12 +31,26 @@ Or using Compass/SASS:
 Javascripts:
 
 ```javascript
+//= require bootstrap
+
 //= require bootstrap/colorpicker
 //= require bootstrap/datepicker
 
 //= require bootstrap/load-image.min
 //= require bootstrap/image-gallery.min
 ```
+
+Pleas note that `bootstrap` needs to be imported before `image_gallery`
+
+For convenience, a `gallery` script is included that loads everything needed for gallery in the correct order, so the above can be simplified to this:
+
+```javascript
+//= require bootstrap/gallery
+//= require bootstrap/colorpicker
+//= require bootstrap/datepicker
+```
+
+Gotcha: The `gallery` script assumes that bootstrap (js) can be loaded simply as `bootstrap`. 
 
 ## Extras
 
