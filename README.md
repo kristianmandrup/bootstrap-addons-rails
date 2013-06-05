@@ -14,6 +14,24 @@ in Gemfile
 
 then bundle it!
 
+## Gotchas!
+
+https://github.com/twitter/bootstrap/issues/2543
+
+https://github.com/the-teacher/the_role/issues/4
+
+http://www.rqgg.net/topic/mrrkx-compiling-less-twitter-bootstrap-files-in-ubuntu.html
+
+http://railscasts.com/episodes/329-more-on-twitter-bootstrap?view=comments
+
+```
+To fix the issue put this in your application.rb
+
+config.assets.initialize_on_precompile = false
+
+then run again...
+```
+
 ## Configuration
 
 Stylesheets:
